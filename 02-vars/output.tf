@@ -95,6 +95,9 @@ output "environment_name"{
 
 # Example on usage of Shell variable
 
+# We can supply the value of SHELL VARIABLE from command line using export
+# export TF_VAR_varName=value
+
 variable "course" {}
 
 output "course_op" {
