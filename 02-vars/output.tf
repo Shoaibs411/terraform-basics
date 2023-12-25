@@ -19,3 +19,13 @@ output "batch-op" {
 output "batch_number"{
     value = "The current batch number is ${var.batch}"
 }
+
+# demo on numerical data type
+
+variable numerical{
+    default = 100
+}
+
+output "numerical-op"{
+    value = "Printing numerical ${var.numerical}"
+}
