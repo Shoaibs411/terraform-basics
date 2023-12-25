@@ -48,3 +48,7 @@ variable "list"{
 output "list_op"{
     value ="Welcome to ${var.list[0]} with ${var.list[1]} Training & this is my batch ${var.list[2]} student is ${var.list[4]}"
 }
+
+output "list_2"{
+    value = var.list
+}
