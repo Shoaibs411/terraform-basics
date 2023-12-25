@@ -1,8 +1,18 @@
 resource "aws_instance" "web" {
-  ami           = "ami-0f75a13ad2e340a58"
+  ami           = "ami-0f75a13ad2e340a58"           # This is called as arguments
   instance_type = "t2.micro"
 
   tags = {
     Name = "DevOps with AWS LabInstance"
   }
+}
+
+output "instance_dns" {
+    value = aws_instance.web.arn.private_dns                               # This is called as attributes. 
+  
+}
+
+output "instance_arn" {
+    value = aws_instance.web.arn                                   # This is called as attributes. 
+  
 }
