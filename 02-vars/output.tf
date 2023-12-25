@@ -49,6 +49,18 @@ output "list_op"{
     value ="Welcome to ${var.list[0]} with ${var.list[1]} Training & this is my batch ${var.list[2]} student is ${var.list[4]}"
 }
 
-output "list_2"{
-    value = var.list
+# Declarin a map variable
+
+variable "training_map" {
+    default = {
+        batch       = "B-56"
+        mode        = "Online & real time training"
+        training    = "DevOps with AWS"
+    }
+}
+
+# Printing a map variable
+
+output "training_map_op"{
+    value = "${var.training_map[training]} batch ${var.training_map[batch]} is completely ${var.training_map[mode]}"
 }
