@@ -72,20 +72,23 @@ output "training_map_op"{
 variable "city"{}
 
 output "city_name" {
-
-value = var.city  
+    value = var.city  
 }
 
 variable "state"{}
 
 output "state_name" {
-
-value = var.state 
+    value = var.state 
 }
 
 variable "country"{}
 
 output "country_name" {
+    value = var.country 
+}
 
-value = var.country 
+variable "environment"{}
+
+output "environment_name"{
+    value = "Name of the environment is ${dev.environment}"
 }
