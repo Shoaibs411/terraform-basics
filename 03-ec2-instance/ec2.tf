@@ -8,7 +8,7 @@ resource "aws_instance" "web" {
 }
 
 output "instance_dns" {
-    value = aws_instance.web.private_dns                               # This is called as attributes. 
+    value = aws_instance.web.private_ip                               # This is called as attributes. 
   
 }
 
