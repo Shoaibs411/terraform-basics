@@ -17,5 +17,5 @@ output "batch-op" {
 # whenever a variable is enclosed in a set of strings or in between a sentence, Then we need to enclose them in strings and with bash notations.
 
 output "batch_number"{
-    value = "The current batch number is var.batch"
+    value = "The current batch number is ${var.batch}"
 }
