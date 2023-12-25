@@ -29,3 +29,22 @@ variable numerical{
 output "numerical_op"{
     value = var.numerical
 }
+
+# Declaring a list variables : A key with multiple values is referred as a list.
+
+variable "list"{
+    default = [
+        "DevOps",
+        "AWS_Cloud",
+        56,
+        true,
+        "Shoaib Shaikh"
+
+    ]
+}
+
+# priting a list variable
+
+output "list_op"{
+    value ="Welcome to ${var.list[0]} with ${var.list[1]} Training & this is my batch ${var.list[2]} student is ${var.list[4]}"
+}
