@@ -71,14 +71,14 @@ output "training_map_op"{
 
 variable "city"{}
 
-output "city_op" {
+output "city_name" {
 
 value = var.city  
 }
 
 variable "state"{}
 
-output "state_op" {
+output "state_name" {
 
 value = var.state 
 }
