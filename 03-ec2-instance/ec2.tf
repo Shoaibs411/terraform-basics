@@ -1,5 +1,5 @@
 resource "aws_instance" "web" {
-  ami           = "ami-0f75a13ad2e340a58"           # This is called as arguments
+  ami           = "ami-0f75a13ad2e340a58"           # This is arguments
   instance_type = "t2.micro"
 
   tags = {
@@ -8,11 +8,11 @@ resource "aws_instance" "web" {
 }
 
 output "instance_dns" {
-    value = aws_instance.web.private_ip                               # This is called as attributes. 
+    value = aws_instance.web.private_ip             # This is attributes. 
   
 }
 
 output "instance_arn" {
-    value = aws_instance.web.arn                                   # This is called as attributes. 
+    value = aws_instance.web.arn                    # This is attributes. 
   
 }
