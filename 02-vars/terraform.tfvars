@@ -1,2 +1,2 @@
-city = "Mumbai"
-state = "Maharashtra"
+city    = "Mumbai"
+state   = "Maharashtra"

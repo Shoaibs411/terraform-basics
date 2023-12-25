@@ -82,3 +82,10 @@ output "state_name" {
 
 value = var.state 
 }
+
+variable "country"{}
+
+output "country_name" {
+
+value = var.country 
+}
