@@ -64,3 +64,10 @@ variable "training_map" {
 output "training_map_op"{
     value = "${var.training_map["training"]} batch ${var.training_map["batch"]} is completely ${var.training_map["mode"]}"
 }
+
+variable "city"{}
+
+output "city_op" {
+
+    value = var.city  
+}
