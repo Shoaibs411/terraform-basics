@@ -1,42 +1,42 @@
 resource "aws_instance" "web" {
-  ami           = "ami-0f75a13ad2e340a58"           # This is arguments
-  instance_type = "t2.micro"
-
+  ami                       = "ami-0f75a13ad2e340a58"           # This is arguments
+  instance_type             = "t2.micro"
   tags = {
-    Name = "DevOps with AWS LabInstance"
+    Name                    = "DevOps with AWS LabInstance"
+    vpc_security_group_ids  = ["aws_security_group.allow_tls.id"]
   }
 }
 
 output "instance_dns" {
-    value = aws_instance.web.private_ip             # This is attributes. 
+    value                   = aws_instance.web.private_ip             # This is attributes. 
   
 }
 
 output "instance_arn" {
-    value = aws_instance.web.arn                    # This is attributes. 
+    value                   = aws_instance.web.arn                    # This is attributes. 
   
 }
 
 resource "aws_security_group" "allow_tls" {
-  name        = "B56_allow_tls"
-  description = "B56 Allow TLS inbound traffic"
+    name                    = "B56_allow_tls"
+    description             = "B56 Allow TLS inbound traffic"
 
   ingress {
-    description      = "SSH from VPC"
-    from_port        = 22
-    to_port          = 22
-    protocol         = "tcp"
-    cidr_blocks      = ["0.0.0.0/0"]
+    description             = "SSH from VPC"
+    from_port               = 22
+    to_port                 = 22
+    protocol                = "tcp"
+    cidr_blocks             = ["0.0.0.0/0"]
   }
 
   egress {
-    from_port        = 0
-    to_port          = 0
-    protocol         = "-1"
-    cidr_blocks      = ["0.0.0.0/0"]
+    from_port               = 0
+    to_port                 = 0
+    protocol                = "-1"
+    cidr_blocks             = ["0.0.0.0/0"]
   }
 
   tags = {
-    Name = "allow_tls"
+    Name                    = "allow_tls"
   }
 }
