@@ -90,5 +90,5 @@ output "country_name" {
 variable "environment"{}
 
 output "environment_name"{
-    value = "Name of the environment is ${dev.environment}"
+    value = "Name of the environment is ${var.environment}"
 }
