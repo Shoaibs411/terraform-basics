@@ -62,5 +62,5 @@ variable "training_map" {
 # Printing a map variable
 
 output "training_map_op"{
-    value = "${var.training_map[training]} batch ${var.training_map[batch]} is completely ${var.training_map[mode]}"
+    value = "${var.training_map["training"]} batch ${var.training_map["batch"]} is completely ${var.training_map["mode"]}"
 }
