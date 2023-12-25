@@ -26,6 +26,6 @@ variable numerical{
     default = 100
 }
 
-output "numerical-op"{
-    value = "Printing numerical ${var.numerical}"
+output "numerical_op"{
+    value = var.numerical
 }
