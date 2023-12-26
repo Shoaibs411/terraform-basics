@@ -8,10 +8,13 @@ terraform {
   }
 }
 
+# Calling backend module
 module "local-module"{
     source         =    "./local"
 }
 
+# This is the example, How we fetch the values from the backend module
+# value = module.moduleName.outputNameDeclaredInTheBackendModule
 output "public_ip"{
     value = module.local-module.public_ip
 }
