@@ -11,8 +11,9 @@ resource "null_resource" "playbook" {
 
     provisioner "remote-exec" {
         inline = [
-            "sudo yum install -y epel-release",
-            "sudo yum install -y ansible",
+            "yum install python3-pip -y",
+            "pip3 install pip --upgrade",
+            "pip3 install ansible",
             "ansible-pull -U https://github.com/Shoaibs411/ansible.git -e ENV=dev -e COMPONENT=mongodb roboshop-pull.yml"
         ] 
     }
