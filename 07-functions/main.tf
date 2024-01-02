@@ -7,9 +7,3 @@ resource "aws_instance" "web" {
     Name                    = "AWS DevOps EC-2 LabInstance"
   }
 }
-
-data "aws_ami" "ami" {
-  most_recent      = true
-  name_regex       = "DevOps-LabImage-CentOS7"
-  owners           = ["355449129696"]
-}
