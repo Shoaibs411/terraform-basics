@@ -4,6 +4,6 @@ resource "aws_instance" "web" {
   instance_type             = "t2.micro"
 
   tags = {
-    Name                    = "AWS DevOps EC-2 LabInstance-${count.index+1}"
+    "Name"                    = element(["catalogue", "cart", "user"], count.index)
   }
 }
